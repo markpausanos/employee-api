@@ -1,4 +1,5 @@
 using System.Data;
+using EmployeeAPI.Middlewares;
 using EmployeeAPI.Repositories;
 using EmployeeAPI.Repositories.Interfaces;
 using EmployeeAPI.Services;
@@ -23,7 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 app.MapControllers();
 
