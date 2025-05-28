@@ -1,0 +1,6 @@
+CREATE TABLE Employees (
+   Id INT PRIMARY KEY IDENTITY(1,1),
+   FirstName NVARCHAR(100) NOT NULL,
+   MiddleName NVARCHAR(100),
+   LastName NVARCHAR(100) NOT NULL
+);
